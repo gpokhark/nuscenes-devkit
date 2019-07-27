@@ -30,7 +30,7 @@ class TestLoader(unittest.TestCase):
 
         assert 'NUSCENES' in os.environ, 'Set NUSCENES env. variable to enable tests.'
 
-        nusc = NuScenes(version='v1.0-mini', dataroot=os.environ['NUSCENES'], verbose=False)
+        nusc = NuScenes(version='v1.01-train', dataroot=os.environ['NUSCENES'], verbose=False)
 
         sample_token = '0af0feb5b1394b928dd13d648de898f5'
         # This sample has a bike rack instance 'bfe685042aa34ab7b2b2f24ee0f1645f' with these parameters

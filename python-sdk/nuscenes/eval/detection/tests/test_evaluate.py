@@ -107,7 +107,7 @@ class TestMain(unittest.TestCase):
         np.random.seed(42)
         assert 'NUSCENES' in os.environ, 'Set NUSCENES env. variable to enable tests.'
 
-        nusc = NuScenes(version='v1.0-mini', dataroot=os.environ['NUSCENES'], verbose=False)
+        nusc = NuScenes(version='v1.01-train', dataroot=os.environ['NUSCENES'], verbose=False)
 
         with open(self.res_mockup, 'w') as f:
             json.dump(self._mock_submission(nusc, 'mini_val'), f, indent=2)
